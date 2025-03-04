@@ -3,11 +3,14 @@ import pytest
 from basic_data_structure import LinkedList
 
 
-@pytest.mark.parametrize('list_name', (
-    'int_list',
-    'str_list',
-    'cycled_list',
-))
+@pytest.mark.parametrize(
+    'list_name',
+    (
+        'int_list',
+        'str_list',
+        'cycled_list',
+    ),
+)
 def test_clear(list_name: str, request: pytest.FixtureRequest):
     lst: LinkedList = request.getfixturevalue(list_name)
     lst.clear()

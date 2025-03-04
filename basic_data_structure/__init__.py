@@ -13,13 +13,13 @@ Expected data structures in future versions:
 3. Actual binary tree class (now package contains `TreeNode` class only)
 4. Red-black tree
 
-Supported python versions: `3.9` → `3.12`
+Supported python versions: `3.9` → `3.13`
 
 Links:
 
-* [GitHub](https://github.com/mishaga/basic_data_structure)
+* [GitHub](https://github.com/mishaga/basic-data-structure)
 * [PyPi](https://pypi.org/project/basic-data-structure/)
-* [Documentation](https://mishaga.github.io/basic_data_structure/)
+* [Documentation](https://mishaga.github.io/basic-data-structure/)
 
 Installation:
 
@@ -182,8 +182,7 @@ if __name__ == '__main__':
 ```
 """
 
-
-from basic_data_structure.linked_list import LinkedList
-from basic_data_structure.nodes.list_node import ListNode
-from basic_data_structure.nodes.tree_node import TreeNode
-from basic_data_structure.stack import Stack
+from basic_data_structure.linked_list import LinkedList as LinkedList
+from basic_data_structure.nodes.list_node import ListNode as ListNode
+from basic_data_structure.nodes.tree_node import TreeNode as TreeNode
+from basic_data_structure.stack import Stack as Stack

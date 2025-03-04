@@ -8,11 +8,14 @@ def test_empty_stack():
     assert len(stack) == 0
 
 
-@pytest.mark.parametrize('sequence', (
-    [1],
-    ['a', 'b', 'c'],
-    [object()],
-))
+@pytest.mark.parametrize(
+    'sequence',
+    (
+        [1],
+        ['a', 'b', 'c'],
+        [object()],
+    ),
+)
 def test_inited_stack(sequence: list):
     stack = Stack(*sequence)
     assert len(stack) == len(sequence)

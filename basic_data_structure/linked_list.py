@@ -128,9 +128,7 @@ from basic_data_structure.exceptions.list_exceptions import (
     NotListNodeError,
 )
 from basic_data_structure.iterators.list_node_iterator import ListNodeIterator
-from basic_data_structure.iterators.list_value_iterator import (
-    ListValueIterator,
-)
+from basic_data_structure.iterators.list_value_iterator import ListValueIterator
 from basic_data_structure.nodes.list_node import ListNode
 
 

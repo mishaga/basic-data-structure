@@ -1,3 +1,1 @@
-pytest_plugins = (
-    'tests.fixtures.linked_list',
-)
+pytest_plugins = ('tests.fixtures.linked_list',)

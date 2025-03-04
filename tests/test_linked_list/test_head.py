@@ -33,15 +33,18 @@ def test_set_new(int_list: LinkedList):
     assert int_list.has_cycle() is False
 
 
-@pytest.mark.parametrize('new_head', (
-    object,
-    object(),
-    1,
-    'qwerty',
-    [1, 2, 3],
-    {4, 5, 6},
-    {7: 8, 9: 10},
-))
+@pytest.mark.parametrize(
+    'new_head',
+    (
+        object,
+        object(),
+        1,
+        'qwerty',
+        [1, 2, 3],
+        {4, 5, 6},
+        {7: 8, 9: 10},
+    ),
+)
 def test_set_incorrect(str_list: LinkedList, new_head):
     assert str_list.head is not None
     with pytest.raises(NotListNodeError):
