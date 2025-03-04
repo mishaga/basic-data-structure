@@ -98,7 +98,7 @@ class TreeNode:
 
     def __init__(
         self,
-        value: Any,  # noqa: WPS110 Found wrong variable name
+        value: Any,
         left: Optional['TreeNode'] = None,
         right: Optional['TreeNode'] = None,
     ) -> None:
@@ -109,6 +109,6 @@ class TreeNode:
             left: (optional) left child of the node
             right: (optional) right child of the node
         """
-        self.value = value  # noqa: WPS110 Found wrong variable name
+        self.value = value
         self.left = left
         self.right = right

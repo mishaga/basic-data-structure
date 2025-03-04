@@ -121,7 +121,7 @@ class Stack:
 
     def push(
         self,
-        value: Any,  # noqa: WPS110 Found wrong variable name
+        value: Any,
     ) -> None:
         """Add a new element to the stack.
 
