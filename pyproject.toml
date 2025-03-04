@@ -5,7 +5,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "basic-data-structure"
-version = "0.0.6"
+version = "0.0.7"
 description = "Implementation of basic sata structures in Python"
 authors = ["Mikhail Shagov <mishaga@me.com>"]
 readme = "README.md"
