@@ -34,7 +34,7 @@ class ListNode:
 
     def __init__(
         self,
-        value: Any,  # noqa: WPS110 Found wrong variable name
+        value: Any,
         nxt: Optional['ListNode'] = None,
     ):
         """Init a list node.
@@ -43,5 +43,5 @@ class ListNode:
             value: a value of the node
             nxt: (optional) link to next node
         """
-        self.value = value  # noqa: WPS110 Found wrong variable name
+        self.value = value
         self.next = nxt

@@ -128,13 +128,11 @@ from basic_data_structure.exceptions.list_exceptions import (
     NotListNodeError,
 )
 from basic_data_structure.iterators.list_node_iterator import ListNodeIterator
-from basic_data_structure.iterators.list_value_iterator import (
-    ListValueIterator,
-)
+from basic_data_structure.iterators.list_value_iterator import ListValueIterator
 from basic_data_structure.nodes.list_node import ListNode
 
 
-class LinkedList:  # noqa: WPS214 Found too many methods
+class LinkedList:
     """Linked list data structure."""
 
     def __init__(self, *args) -> None:
@@ -224,7 +222,7 @@ class LinkedList:  # noqa: WPS214 Found too many methods
 
         raise ListIndexOfRangeError
 
-    def __delitem__(self, index: int) -> None:  # noqa: WPS603 Found using restricted magic method
+    def __delitem__(self, index: int) -> None:
         """Delete a node at a specific index.
 
         Time complexity: `O(n)`
@@ -321,7 +319,7 @@ class LinkedList:  # noqa: WPS214 Found too many methods
             raise NotListNodeError
         self.__head = new_head
 
-    def values(self) -> ListValueIterator:  # noqa: WPS110 Found wrong variable name
+    def values(self) -> ListValueIterator:
         """Return values iterator.
 
         On each call `next` function on the iterator, you'll be given actual value of a `ListNode`,
@@ -349,7 +347,7 @@ class LinkedList:  # noqa: WPS214 Found too many methods
 
     def append(
         self,
-        value: Any,  # noqa: WPS110 Found wrong variable name
+        value: Any,
     ) -> None:
         """Append value to the end of list.
 
@@ -389,7 +387,7 @@ class LinkedList:  # noqa: WPS214 Found too many methods
 
     def prepend(
         self,
-        value: Any,  # noqa: WPS110 Found wrong variable name
+        value: Any,
     ) -> None:
         """Prepend a value to the list (add to the beginning).
 
@@ -409,7 +407,7 @@ class LinkedList:  # noqa: WPS214 Found too many methods
     def insert(
         self,
         index: int,
-        value: Any,  # noqa: WPS110 Found wrong variable name
+        value: Any,
     ) -> None:
         """Insert value into given index.
 
@@ -493,7 +491,7 @@ class LinkedList:  # noqa: WPS214 Found too many methods
 
         self.__head = previous
 
-    def rotate(self, count: int) -> None:  # noqa: WPS210 Found too many local variables
+    def rotate(self, count: int) -> None:
         """Rotate (shift) list.
 
         To rotate right, pass a positive value. To rotate left, pass a negative value.
@@ -523,7 +521,7 @@ class LinkedList:  # noqa: WPS214 Found too many methods
         if length < 2:
             return
 
-        count = count % length  # noqa: WPS350 Found usable augmented assign pattern
+        count = count % length
         if count == 0:
             return
 

@@ -1,7 +1,9 @@
 import pytest
 
 from basic_data_structure import LinkedList
-from basic_data_structure.exceptions.list_exceptions import ListNegativeIndexError
+from basic_data_structure.exceptions.list_exceptions import (
+    ListNegativeIndexError,
+)
 
 
 @pytest.mark.parametrize('idx', (0, 1, 2, 10))

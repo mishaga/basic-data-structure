@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.9", "3.10", "3.11", "3.12"]
+        python-version: ["3.9", "3.10", "3.11", "3.12", "3.13"]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -24,15 +24,21 @@ jobs:
       - name: Install dependencies
         run: poetry install --no-root
 
-      - name: Analysing the code with flake8
-        run: poetry run flake8 --count basic_data_structure/
+      - name: Run isort
+        run: poetry run isort . --check-only
+
+      - name: Run ruff check
+        run: poetry run ruff check
+
+      - name: Run ruff format
+        run: poetry run ruff format --check
 
 
   test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.9", "3.10", "3.11", "3.12"]
+        python-version: ["3.9", "3.10", "3.11", "3.12", "3.13"]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -65,7 +71,7 @@ jobs:
       - name: Set up Python & Poetry
         uses: mishaga/action-poetry@1
         with:
-          python-version: '3.12'
+          python-version: '3.13'
 
       - name: Install dependencies
         run: poetry install --no-root
