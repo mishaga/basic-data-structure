@@ -17,6 +17,7 @@ def main():
     node = lst[4]  # get node
 
     print('Saved node:', node.value)
+    # Output: Saved node: 3
 
     lst.insert(4, 4)  # insert new value into list
     lst.append(2)  # append a new value
@@ -27,17 +28,18 @@ def main():
     lst.reverse()  # reverse list
 
     print('List length:', len(lst))  # length of the list
+    # Output: List length: 9
 
+    # iteration over values
     for val in lst.values():
-        # iteration over values
         print(val, end=' ')
 
     # Output: 1 2 3 4 5 6 7 8 9
 
     print('')
 
+    # iteration over nodes
     for node in lst:
-        # iteration over nodes
         print(node.value, end=' ')
 
     # Output: 1 2 3 4 5 6 7 8 9

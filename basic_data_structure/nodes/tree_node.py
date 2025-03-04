@@ -65,13 +65,9 @@ def generate_tree() -> TreeNode:
 def dfs(root: Optional[TreeNode]) -> Generator[int, None, None]:
     \"""Depth-first search.\"""
     if root:
-        if root.left:
-            yield from dfs(root.left)
-
+        yield from dfs(root.left)
         yield root.value
-
-        if root.right:
-            yield from dfs(root.right)
+        yield from dfs(root.right)
 
 
 def main():
