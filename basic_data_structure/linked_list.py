@@ -50,6 +50,30 @@ if __name__ == '__main__':
 
 ```
 
+## ListNode
+
+`basic_data_structure.nodes.list_node.ListNode`
+
+If you'd like to create linked list by yourself, you can use `ListNode` class like so, for example:
+
+```python
+from basic_data_structure import ListNode
+
+
+def main():
+    head = ListNode(1, ListNode(2, ListNode(3)))
+    while head:
+        print(head.value, end=' ')
+        head = head.next
+
+    # Output: 1 2 3
+
+
+if __name__ == '__main__':
+    main()
+
+```
+
 ## Dunder methods
 
 1. `__bool__` – return `False` if the list is empty, `True` otherwise
@@ -95,29 +119,7 @@ if __name__ == '__main__':
 
    ```
 
-## ListNode
-
-`basic_data_structure.nodes.list_node.ListNode`
-
-If you'd like to create linked list by yourself, you can use `ListNode` class like this, for example:
-
-```python
-from basic_data_structure import ListNode
-
-
-def main():
-    head = ListNode(1, ListNode(2, ListNode(3)))
-    while head:
-        print(head.value, end=' ')
-        head = head.next
-
-    # Output: 1 2 3
-
-
-if __name__ == '__main__':
-    main()
-
-```
+## Public methods
 """
 
 from typing import Any, Optional

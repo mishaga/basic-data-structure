@@ -37,20 +37,7 @@ if __name__ == '__main__':
 
 ```
 
-## Dunder methods
-
-1. `__bool__` – return `False` if the stack is empty, `True` otherwise
-   ```python
-   while stack:
-       value = stack.pop()
-   ```
-2. `__len__` – return length (count of elements) of the stack
-   ```python
-   if len(stack) > 2:
-       ...
-   ```
-
-### A note on iteration
+## A note on iteration
 
 The `__iter__` and `__next__` methods are not implemented **intentionally**. If you want to iterate
 over a Stack like this `for i in stack`, you're better off using built-in `list` instead, because
@@ -64,6 +51,21 @@ while stack:
     element = stack.pop()
     ...
 ```
+
+## Dunder methods
+
+1. `__bool__` – return `False` if the stack is empty, `True` otherwise
+   ```python
+   while stack:
+       value = stack.pop()
+   ```
+2. `__len__` – return length (count of elements) of the stack
+   ```python
+   if len(stack) > 2:
+       ...
+   ```
+
+## Public methods
 """
 
 from typing import Any
